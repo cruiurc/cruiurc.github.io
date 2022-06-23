@@ -14,7 +14,7 @@ Welcome to cc's documentation!
 
    example/*
 
-   example/*
+
 
 
 
