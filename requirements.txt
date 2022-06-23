@@ -1,2 +1,1 @@
-sphinxcontrib-plantuml==1.1.0
-
+plantweb==1.2.1
