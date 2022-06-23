@@ -51,6 +51,6 @@ exclude_patterns = []
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
-import better
-html_theme = 'better'
-html_theme_path = [better.better_theme_path]
+
+html_theme = 'sphinx_rtd_theme'
+
