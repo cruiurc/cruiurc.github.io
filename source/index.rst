@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Which will's documentation!
+Which will
 ======================================
 
 .. toctree::
@@ -12,9 +12,7 @@ Welcome to Which will's documentation!
 
 
 
-Indices and tables
-==================
+   workspace
+   diary
+   miscellaneous
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
