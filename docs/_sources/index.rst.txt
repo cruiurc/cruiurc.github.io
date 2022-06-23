@@ -7,12 +7,12 @@ Which will
 ======================================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: Contents:
 
 
 
-   workspace
+   workspace 
    diary
    miscellaneous
 
