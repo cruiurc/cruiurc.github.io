@@ -7,12 +7,13 @@ Which will
 ======================================
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 1
+   :glob:	      
    :caption: Contents:
 
-   DIARY
-   WORK
-   MISCELLANEOUS
+   DIARY/*
+   WORK/*
+   MISCELLANEOUS/*
 
 
 
