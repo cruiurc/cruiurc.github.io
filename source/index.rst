@@ -10,9 +10,9 @@ Which will
    :maxdepth: 3
    :caption: Contents:
 
+   DIARY
+   WORK
+   MISCELLANEOUS
 
 
-   diary
-   miscellaneous
-   work
 
