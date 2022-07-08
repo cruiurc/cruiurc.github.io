@@ -12,7 +12,6 @@ Which will
 
 
 
-   workspace 
    diary
    miscellaneous
 
