@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Which will'
+project = '拖拉机'
 copyright = '2022, cr'
 author = 'cr'
 
@@ -53,4 +53,4 @@ exclude_patterns = []
 html_static_path = ['_static']
 
 
-html_theme = 'sphinx_rtd_theme'
+html_theme = 'bizstyle'
