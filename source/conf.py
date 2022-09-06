@@ -53,4 +53,4 @@ exclude_patterns = []
 html_static_path = ['_static']
 
 
-html_theme = 'bizstyle'
+html_theme = 'traditional'

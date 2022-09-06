@@ -2,7 +2,7 @@
 ======================================
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 3
    :glob:	      
    :caption: Contents:
 
@@ -12,3 +12,7 @@
 
 
 
+Indices and tables
+==================
+
+* :ref:`genindex`
