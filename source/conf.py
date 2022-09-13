@@ -54,3 +54,4 @@ html_static_path = ['_static']
 
 
 html_theme = 'agogo'
+language = 'zh_CN'

@@ -1,11 +1,11 @@
-Diary
-======
+日记
+====
 
 2022
 ----
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
    :glob:	      
 
 
