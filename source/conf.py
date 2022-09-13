@@ -53,4 +53,4 @@ exclude_patterns = []
 html_static_path = ['_static']
 
 
-html_theme = 'traditional'
+html_theme = 'agogo'

@@ -2,17 +2,12 @@
 ======================================
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 1
    :glob:	      
-   :caption: Contents:
-
-   DIARY/*
-   WORK/*
-   MISCELLANEOUS/*
 
 
+   worklog/index
+   diary/index
+   miscellaneous/index
 
-Indices and tables
-==================
 
-* :ref:`genindex`

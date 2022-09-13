@@ -1,10 +1,13 @@
 Diary
 ======
 
+2022
+----
+
 .. toctree::
    :maxdepth: 3
    :glob:	      
-   :caption: Contents:
-   :glob:
+
+
 
    2022/*
