@@ -7,7 +7,7 @@
 
 
    worklog/index
-   diary/index
    miscellaneous/index
+   diary/index
 
 
