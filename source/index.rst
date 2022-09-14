@@ -4,7 +4,7 @@
 .. toctree::
    :maxdepth: 1
    :glob:	      
-
+   :caption: content:
 
    worklog/index
    miscellaneous/index
