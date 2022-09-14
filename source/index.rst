@@ -6,7 +6,7 @@
    :glob:	      
    :caption: content:
 
-   worklog/index
+   work/index
    miscellaneous/index
    diary/index
 
