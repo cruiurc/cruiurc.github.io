@@ -8,7 +8,7 @@
 
    log
 
-2. 有主题的工作记录
+2. 主题
 
 .. toctree::
    :maxdepth: 1
