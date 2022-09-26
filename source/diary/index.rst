@@ -5,9 +5,6 @@
 ----
 
 .. toctree::
-   :maxdepth: 2
-   :glob:
-
-
-
-   2022/*
+   :maxdepth: 1
+   
+   diary
