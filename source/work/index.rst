@@ -14,7 +14,7 @@
    :maxdepth: 1
    :glob:	      
 
-   asset/*
+   topic/*
 
 
 
