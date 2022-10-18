@@ -6,7 +6,7 @@
 .. toctree::
    :maxdepth: 1
 
-   log
+   *
 
 2. 主题
 
