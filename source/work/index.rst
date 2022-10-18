@@ -6,7 +6,8 @@
 .. toctree::
    :maxdepth: 1
 
-   *
+   yjh
+   sj
 
 2. 主题
 
