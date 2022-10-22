@@ -1,21 +1,37 @@
 工作
 ====
 
-1. 日志
+1. YJH
+
+   - 日志
 
 .. toctree::
    :maxdepth: 1
 
-   yjh
-   sj
+   yjh/yjh
 
-2. 主题
+
+   - 主题
 
 .. toctree::
    :maxdepth: 1
    :glob:	      
 
-   topic/*
+   yjh/topic/*
 
+2. SJ
 
+   -  日志
+      
+.. toctree::
+   :maxdepth: 1
 
+   sj/sj
+
+   - 主题
+     
+.. toctree::
+   :maxdepth: 1
+   :glob:	      
+
+   sj/topic/*
