@@ -9,7 +9,6 @@
 
    sj/sj
 
-----
 
 .. toctree::
    :maxdepth: 1
@@ -18,6 +17,7 @@
    sj/topic/*
 
 
+----
 
 
 2. YJH
@@ -28,7 +28,6 @@
 
    yjh/yjh
 
-----
 
 .. toctree::
    :maxdepth: 1
