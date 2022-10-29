@@ -2,10 +2,11 @@
 =====================
 
 .. graphviz::
-    :scale: 20%
 
     digraph "CPC"{
     rankdir=LR
+    fontsize = 6
+    
     企划中心->{产品管理,项目管理,信息情报管理,知识产权管理,采购管理}
 
 
