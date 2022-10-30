@@ -17,12 +17,6 @@
 
    sj/topic/*
 
-
-.. toctree::
-   :maxdepth: 1
-   :glob:	      
-
-   sj/asset/*
 ----
 
 
