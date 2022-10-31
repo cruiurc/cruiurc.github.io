@@ -25,7 +25,7 @@
     }
 
 
-.. image:: asset/编码规则.png
+.. image:: ./asset/编码规则.png
     :scale: 20
 
 
