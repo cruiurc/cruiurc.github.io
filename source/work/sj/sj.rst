@@ -14,6 +14,13 @@ TODO
     :header: "Time", "Use(hours)", "Log", "Comment"
     :widths: 10, 10, 50, 50
 
+    8:00, 3.5, 10月份经营分析复盘扩大会议 :doc:`topic/10月份经营分析复盘扩大会议-20221101`
+
+
+:note:
+   1. 
+
+
 2022-10-31
 -----------
 :plan:
@@ -23,7 +30,7 @@ TODO
    - [ ] 通知周报格式变化
    - [ ] zendao
 
-.. csv-table:: log
+.. csv-table::
     :header: "Time", "Use(hours)", "Log", "Comment"
     :widths: 10, 10, 50, 50
 
