@@ -3,6 +3,21 @@ SJ
 TODO 
 -----
 - [ ] zendao
+
+2022-11-02
+-----------
+:plan:
+   - [x] 营销培训
+   - [ ] zendao
+
+.. csv-table:: 
+    :header: "Time", "Use(hours)", "Log", "Comment"
+    :widths: 10, 10, 50, 50
+
+    8:00, 4, 营销会议和培训
+    13:30, 4, 
+
+
 2022-11-01
 -----------
 :plan:
@@ -10,7 +25,7 @@ TODO
    - [x] 参加营销会议
 
 
-.. csv-table:: log
+.. csv-table:: 
     :header: "Time", "Use(hours)", "Log", "Comment"
     :widths: 10, 10, 50, 50
 
