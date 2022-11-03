@@ -3,6 +3,24 @@ SJ
 TODO 
 -----
 - [ ] zentao
+- [ ] 数智化小组工作跟踪
+
+
+2022-11-03
+-----------
+:plan:
+   - [x] 史记生物月例会
+
+.. csv-table:: 
+   :header: "Time", "Use(hours)", "Log", "Comment"
+   :widths: 10, 10, 50, 50
+
+   8:00, ,史记生物月例会,
+
+:note:
+   1. 公司负债从70%降低到45%；毛利率约40%；月收入约1.3亿，支出约1.3亿
+   2. 华南地区测算猪只销售毛利约40%
+   
 
 2022-11-02
 -----------
@@ -12,12 +30,12 @@ TODO
    - [x] zentao实施方案和计划ppt
 
 .. csv-table:: 
-    :header: "Time", "Use(hours)", "Log", "Comment"
-    :widths: 10, 10, 50, 50
+   :header: "Time", "Use(hours)", "Log", "Comment"
+   :widths: 10, 10, 50, 50
 
-    8:00, 4, 营销会议和培训, 讲师水平和讲演内容都比较low
-    13:30, 4, Zentao应用方案PPT
-    18:00, 0.5, Zentao创建环控器example
+   8:00, 4, 营销会议和培训, 讲师水平和讲演内容都比较low
+   13:30, 4, Zentao应用方案PPT
+   18:00, 0.5, Zentao创建环控器example
 
 :note:
    1. [商机]无针头注射机器人
