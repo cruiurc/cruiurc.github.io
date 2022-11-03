@@ -40,7 +40,7 @@ TODO
 :note:
    1. [商机]无针头注射机器人
    2. 饲料车监控项目在AIOT部有人力冲突，在考虑是否转移到自动化部
-   3. :download: `asset/zentao-plan.pdf`
+   3. :download:`asset/zentao-plan.pdf`
 
 2022-11-01
 -----------
