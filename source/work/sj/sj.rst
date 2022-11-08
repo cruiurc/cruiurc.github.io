@@ -24,6 +24,7 @@ TODO
 
 :note:
    1. :doc:`/work/sj/topic/CE认证`
+   2. :download:`asset/繁昌场饲喂器试验复盘.pdf`  :download:`asset/繁昌场饲喂器试验复盘.pptx`
 
 
 2022-11-07
