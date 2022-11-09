@@ -14,6 +14,9 @@ TODO
    - 向全员开展项目管理&工具的培训
    - 跟踪繁昌厂和和县厂饲喂器试验进度，并提交材料作为史记生物月例会备用材料
 
+----
+
+
 2022-11-10
 -----------
 :plan:
@@ -24,7 +27,7 @@ TODO
 2022-11-09
 -----------
 :plan:
-   - [x] 追溯和测温芯片交流（乔博士），:download:`work/sj/asset/SMS1000 product intro_Nov 2022.pdf` :download:`EV31100 datasheet 221027.1.pdf`
+   - [x] 追溯和测温芯片交流（乔博士）， :download:`work/sj/asset/SMS1000 product intro_Nov 2022.pdf` :download:`work/sj/asset/EV31100 datasheet 221027.1.pdf`
    - [x] 项目管理流程体系方法培训材料
    - [ ] 收集、梳理预算
 
