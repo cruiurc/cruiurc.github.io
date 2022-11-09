@@ -2,39 +2,17 @@ SJ
 ===
 TODO 
 -----
-.. list-table:: Frozen Delights!
-    :widths: 15 10 30
-    :header-rows: 1
+:Next:
+   - 项目进度计划完善
+   - 在11月11日前的史记生物周会PPT材料中包含：注册pigmate.ai网站、注册猪同学、申请猪同学、Pigmate商标
+   - 落实环控器和饲喂器产品CE认证
+   - 猪场通讯方案与华为沟通方案
 
-    * - Treat
-      - Quantity
-      - Description
-    * - Albatross
-      - 2.99
-      - On a stick!
-    * - Crunchy Frog
-      - 1.49
-      - If we took the bones out, it wouldn't be
-        crunchy, now would it?
-    * - Gannet Ripple
-      - 1.99
-      - On a stick!
-
-
-.. list-table:: 
-   :widths: 50 50
-   :header-rows: 1
-
-   * - Next
-     - 项目进度计划完善
-     - 数智化小组工作跟踪、材料准备和会议组织
-     - 在11月11日前的史记生物周会PPT材料中包含：注册pigmate.ai网站、注册猪同学、申请猪同学、Pigmate商标
-     - 在11月11日前完成物联网平台实施情况
-   * - Someday
-     - 落实环控器和饲喂器产品CE认证
-     - 向全员开展项目管理&工具的培训
-     - 猪场通讯方案与华为沟通方案
-     - 跟踪繁昌厂和和县厂饲喂器试验进度，并提交材料作为史记生物月例会备用材料
+:Someday:
+   - 数智化小组工作跟踪、材料准备和会议组织
+   - 在11月11日前完成物联网平台实施情况
+   - 向全员开展项目管理&工具的培训
+   - 跟踪繁昌厂和和县厂饲喂器试验进度，并提交材料作为史记生物月例会备用材料
 
 2022-11-10
 -----------
