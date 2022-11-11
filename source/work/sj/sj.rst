@@ -20,11 +20,22 @@ TODO
 ------
 2022-11-11
 -----------
+:plan:
+   - [ ] 预算修订会议
+   - [ ] 时识科技合作意向书评审
+
+.. csv-table:: 
+   :header: "Time", "Use(hour)", "Log"
+   :widths: 10, 10, 70
+
+   10:00, 1, 创建钉钉日志
+
+
 :note:
    1. 推广中心使命
 
       1. 首要任务是做好内部销售工作
-      2. 
+      2. 公关重点是抓住省级龙头企业（top200）
 
 2022-11-10
 -----------
@@ -34,7 +45,7 @@ TODO
    - [x] 物联网平台实施情况汇报材料
 
 .. csv-table:: 
-   :header: "Time", "Use(hours)", "Log"
+   :header: "Time", "Use(hour)", "Log"
    :widths: 10, 10, 70
 
    9:00, 0.5, 维护知识管理，增加昨天会议记录，增加学习目录&more
@@ -58,7 +69,7 @@ TODO
    - [x] 托管方案评议
 
 .. csv-table:: 
-   :header: "Time", "Use(hours)", "Log"
+   :header: "Time", "Use(hour)", "Log"
    :widths: 10, 10, 70
 
    9:00, 2.5, 项目管理培训材料
@@ -95,7 +106,7 @@ TODO
    - [x] 繁昌场饲喂器试验复盘
 
 .. csv-table:: 
-   :header: "Time", "Use(hours)", "Log"
+   :header: "Time", "Use(hour)", "Log"
    :widths: 10, 10, 70
 
    8:30, 0.5, 与刘欢沟通饲喂器项目计划的问题，指出修订意见
@@ -130,7 +141,7 @@ TODO
    - [x] 史记智能周例会&会议纪要&跟踪事项
 
 .. csv-table:: 
-   :header: "Time", "Use(hours)", "Log"
+   :header: "Time", "Use(hour)", "Log"
    :widths: 10, 10, 70
 
    8:00, 1, 维护知识管理平台
@@ -161,7 +172,7 @@ TODO
    - [ ] OKR
 
 .. csv-table:: 
-   :header: "Time", "Use(hours)", "Log"
+   :header: "Time", "Use(hour)", "Log"
    :widths: 10, 10, 70
 
    8:30, 3, 试用钉钉在线文档做知识管理，编制项目管理模板
@@ -186,7 +197,7 @@ TODO
    - [x] 史记生物月例会
 
 .. csv-table:: 
-   :header: "Time", "Use(hours)", "Log", "Comment"
+   :header: "Time", "Use(hour)", "Log", "Comment"
    :widths: 10, 10, 50, 50
 
    8:00, 13,史记生物月例会,
@@ -208,7 +219,7 @@ TODO
    - [x] zentao实施方案和计划ppt
 
 .. csv-table:: 
-   :header: "Time", "Use(hours)", "Log", "Comment"
+   :header: "Time", "Use(hour)", "Log", "Comment"
    :widths: 10, 10, 50, 50
 
    8:00, 4, 营销会议和培训, 
@@ -228,7 +239,7 @@ TODO
 
 
 .. csv-table:: 
-    :header: "Time", "Use(hours)", "Log", "Comment"
+    :header: "Time", "Use(hour)", "Log", "Comment"
     :widths: 10, 10, 50, 50
 
     8:00, 3.5, 10月份经营分析复盘扩大会议
@@ -250,7 +261,7 @@ TODO
    - [ ] zentao
 
 .. csv-table::
-    :header: "Time", "Use(hours)", "Log", "Comment"
+    :header: "Time", "Use(hour)", "Log", "Comment"
     :widths: 10, 10, 50, 50
 
     9:00, 1.5, 合并企划、行政、软件、自动化、物联网各部门预算, 存在不统一的模板
