@@ -44,7 +44,7 @@ TODO
 
 :note:
    1. :download:`asset/通风结构类型.png`
-   2. :download:`产品地图 <asset/MY产品地图.png>` :download:`人力统计 <asset/MY人力统计.png>`
+   2. :img:`产品地图 <asset/MY产品地图.png>` :download:`人力统计 <asset/MY人力统计.png>`
 
 2022-11-16
 -----------
