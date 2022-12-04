@@ -1,6 +1,9 @@
 taskjuggler tjp files
 ========================
 
+envc
+-----
+
 ::
 
 /*
@@ -10,10 +13,10 @@ taskjuggler tjp files
  * TaskJuggler. Please see the TaskJuggler manual for a more detailed
  * description of the various syntax elements.
  */
-project acso "Accounting Software"  2002-01-16 +4m {
+project feeder "智能环控器产品开发项目"  2022-09-10 +12m {
   # Set the default time zone for the project. If not specified, UTC
   # is used.
-  timezone "Europe/Paris"
+  timezone "Asia/Shanghai"
   # Hide the clock time. Only show the date.
   timeformat "%Y-%m-%d"
   # Use US format for numbers
@@ -24,9 +27,9 @@ project acso "Accounting Software"  2002-01-16 +4m {
   # the project reports. If not specified, the current day will be
   # used, but this will likely be outside of the project range, so it
   # can't be seen in the reports.
-  now 2002-03-05-13:00
+  # now 2002-03-05-13:00
   # The currency for all money values is the US Dollar.
-  currency "USD"
+  currency "CNY"
 
   # We want to compare the baseline scenario to one with a slightly
   # delayed start.
@@ -39,76 +42,76 @@ project acso "Accounting Software"  2002-01-16 +4m {
 }
 
 # This is not a real copyright for this file. It's just used as an example.
-copyright "漏 2002 Crappy Software, Inc."
+copyright "© Copyright 2022 SGI, ltd. All Rights Reversed"
 
 # The daily default rate of all resources. This can be overridden for each
 # resource. We specify this, so that we can do a good calculation of
 # the costs of the project.
-rate 390.0
+# rate 390.0
 
 # Register Good Friday as a global holiday for all resources.
-leaves holiday "Good Friday" 2002-03-29
-flags team
+# leaves holiday "Good Friday" 2002-03-29
+# flags team
 
 # This is one way to form teams
-macro allocate_developers [
-  allocate dev1
-  allocate dev2
-  allocate dev3
-]
-
-# In order to do a simple profit and loss analysis of the project we
-# specify accounts. One for the development costs, one for the
-# documentation costs, and one account to credit the customer payments
-# to.
-account cost "Project Cost" {
-  account dev "Development"
-  account doc "Documentation"
-}
-account rev "Payments"
-# The Profit&Loss analysis should be rev - cost accounts.
-balance cost rev
-
-resource boss "Paul Henry Bullock" {
-  email "phb@crappysoftware.com"
-  Phone "x100"
-  rate 480
-}
-resource dev "Developers" {
-  managers boss
-  resource dev1 "Paul Smith" {
-    email "paul@crappysoftware.com"
-    Phone "x362"
-    rate 350.0
-  }
-  resource dev2 "S茅bastien Bono" {
-    email "SBono@crappysoftware.com"
-    Phone "x234"
-  }
-  resource dev3 "Klaus M眉ller" {
-    email "Klaus.Mueller@crappysoftware.com"
-    Phone "x490"
-    leaves annual 2002-02-01 - 2002-02-05
-  }
-  flags team
-}
-resource misc "The Others" {
-  managers boss
-  resource test "Peter Murphy" {
-    email "murphy@crappysoftware.com"
-    Phone "x666"
-    limits { dailymax 6.4h }
-    rate 310.0
-  }
-  resource doc "Dim Sung" {
-    email "sung@crappysoftware.com"
-    Phone "x482"
-    rate 300.0
-    leaves annual 2002-03-11 - 2002-03-16
-  }
-
-  flags team
-}
+# macro allocate_developers [
+#   allocate dev1
+#   allocate dev2
+#   allocate dev3
+# ]
+# 
+# # In order to do a simple profit and loss analysis of the project we
+# # specify accounts. One for the development costs, one for the
+# # documentation costs, and one account to credit the customer payments
+# # to.
+# account cost "Project Cost" {
+#   account dev "Development"
+#   account doc "Documentation"
+# }
+# account rev "Payments"
+# # # The Profit&Loss analysis should be rev - cost accounts.
+# # balance cost rev
+# 
+# resource boss "Paul Henry Bullock" {
+#   email "phb@crappysoftware.com"
+#   Phone "x100"
+#   rate 480
+# }
+# resource dev "Developers" {
+#   managers boss
+#   resource dev1 "Paul Smith" {
+#     email "paul@crappysoftware.com"
+#     Phone "x362"
+#     rate 350.0
+#   }
+#   resource dev2 "S茅bastien Bono" {
+#     email "SBono@crappysoftware.com"
+#     Phone "x234"
+#   }
+#   resource dev3 "Klaus M眉ller" {
+#     email "Klaus.Mueller@crappysoftware.com"
+#     Phone "x490"
+#     leaves annual 2002-02-01 - 2002-02-05
+#   }
+#   flags team
+# }
+# resource misc "The Others" {
+#   managers boss
+#   resource test "Peter Murphy" {
+#     email "murphy@crappysoftware.com"
+#     Phone "x666"
+#     limits { dailymax 6.4h }
+#     rate 310.0
+#   }
+#   resource doc "Dim Sung" {
+#     email "sung@crappysoftware.com"
+#     Phone "x482"
+#     rate 300.0
+#     leaves annual 2002-03-11 - 2002-03-16
+#   }
+# 
+#   flags team
+# }
 
 # Now we specify the work packages. The whole project is described as
 # a task that contains subtasks. These subtasks are then broken down
@@ -117,13 +120,13 @@ resource misc "The Others" {
 # are inherited from the enclosing task. This saves you a lot of typing.
 task AcSo "Accounting Software" {
 
-  # All work-related costs will be booked to this account unless the
-  # subtasks specify something different.
-  chargeset dev
-  # For the duration of the project we have running cost that are not
-  # included in the labor cost.
-  charge 170 perday
-  responsible boss
+#  # All work-related costs will be booked to this account unless the
+#  # subtasks specify something different.
+#  chargeset dev
+#  # For the duration of the project we have running cost that are not
+#  # included in the labor cost.
+#  charge 170 perday
+#  responsible boss
 
   task spec "Specification" {
     # The effort to finish this task is 20 man-days.
@@ -491,6 +494,355 @@ resourcereport contactList "" {
 # resource is under- or over-allocated for.
 resourcereport resourceGraph "" {
   scenarios delayed
+  headline "Resource Allocation Graph"
+  columns no, name, effort, rate, weekly { ${TaskTip} }
+  loadunit shortauto
+  # We only like to show leaf tasks for leaf resources.
+  hidetask ~(isleaf() & isleaf_())
+  sorttasks plan.start.up
+}
+
+
+Blank
+---------
+::
+/*
+ * This file contains a project skeleton. It is part of the
+ * TaskJuggler project management tool. You can use this as a basis to
+ * start your own project file.
+ */
+project envc "智能环控器产品开发"  2022-09-01 +12m {
+  # Set the default time zone for the project. If not specified, UTC
+  # is used.
+  timezone "Asia/Shanghai"
+  # Hide the clock time. Only show the date.
+  timeformat "%Y-%m-%d"
+  # Use US format for numbers
+  numberformat "-" "" "," "." 1
+  # Use US financial format for currency values. Don't show cents.
+  currencyformat "(" ")" "," "." 0
+  # Pick a day during the project that will be reported as 'today' in
+  # the project reports. If not specified, the current day will be
+  # used, but this will likely be outside of the project range, so it
+  # can't be seen in the reports.
+  # now 2011-12-24
+  # The currency for all money values is the Euro.
+  currency "CNY"
+
+  # You can define multiple scenarios here if you need them.
+  #scenario plan "Plan" {
+  #  scenario actual "Actual"
+  #}
+
+  # You can define your own attributes for tasks and resources. This
+  # is handy to capture additional information about the project that
+  # is not directly impacting the project schedule, but which you like to
+  # keep in one place.
+  #extend task {
+  #  reference spec "Link to Wiki page"
+  #}
+  #extend resource {
+  #  text Phone "Phone"
+  #}
+}
+
+copyright "SGI, ltd."
+
+# If you have any text block that you need multiple times to describe
+# your project, you should define a macro for it. Macros can even have
+# variable segments that you can set upon calling the macro.
+#
+# macro Task [
+#   task "A ${1} task" {
+#   }
+# ]
+#
+# Can be called as
+# ${Task "big"}
+# to generate
+# task "A big task" {
+# }
+
+# You can attach flags to accounts, resources and tasks. These can be
+# used to filter out subsets of them during reporting.
+flags important, hidden
+
+# If you want to do budget planning for your project, you need to
+# define some accounts.
+# account cost "Project Cost" {
+#   account dev "Development"
+#   account doc "Documentation"
+# }
+# account rev "Customer Payments"
+
+# The Profit & Loss analysis should be rev - cost accounts.
+# balance cost rev
+
+# Define your public holidays here.
+vacation "New Year's Day" 2012-01-02
+vacation "Birthday of Martin Luther King, Jr." 2012-01-16
+vacation "Washington's Birthday" 2012-02-20
+vacation "Memorial Day" 2012-05-28
+vacation "Independence Day" 2012-07-04
+vacation "Labor Day" 2012-09-03
+vacation "Columbus Day" 2012-10-08
+vacation "Veterans Day" 2012-11-12
+vacation "Thanksgiving Day" 2012-11-22
+vacation "Christmas Day" 2012-12-25
+
+# The daily default rate of all resources. This can be overridden for each
+# resource. We specify this so we can do a good calculation of
+# the costs of the project.
+# rate 400.0
+
+# This is a set of example resources.
+# resource r1 "Resource 1"
+# resource t1 "Team 1" {
+#   managers r1
+#   resource r2 "Resource 2"
+#   resource r3 "Resource 3"
+# }
+# 
+# # This is a resource that does not do any work.
+# resource s1 "System 1" {
+#   efficiency 0.0
+#   rate 600.0
+# }
+
+task project "智能环控器产品开发" {
+  task wp1 "SGI9100" {
+    task t1 "开发"
+    task t2 "测试"
+  }
+  task wp2 "SGI9200" {
+    depends !wp1
+    task t1 "开发"
+    task t2 "测试"
+    task t3 "试点验证"
+  }
+  task wp3 "SGI9300" {
+    depends !wp1
+    task t1 "开发"
+    task t2 "测试"
+    task t3 "试点验证"
+  }  
+  task deliveries "Deliveries" {
+    task "SGI9200泰安交付" {
+      depends !!wp1
+    }
+    task "SGI9300试点交付" {
+      depends !!wp2
+    }
+  }
+}
+
+# Now the project has been specified completely. Stopping here would
+# result in a valid TaskJuggler file that could be processed and
+# scheduled. Here reports will be generated to visualize the
+# results.
+
+navigator navbar {
+  hidereport 0
+}
+
+macro TaskTip [
+  tooltip istask() -8<-
+    '''Start: ''' <-query attribute='start'->
+    '''End: ''' <-query attribute='end'->
+    ----
+    '''Resources:'''
+
+    <-query attribute='resources'->
+    ----
+    '''Precursors: '''
+
+    <-query attribute='precursors'->
+    ----
+    '''Followers: '''
+
+    <-query attribute='followers'->
+    ->8-
+]
+
+textreport frame "" {
+  header -8<-
+    == TaskJuggler Project Template ==
+    <[navigator id="navbar"]>
+  ->8-
+  footer "----"
+  textreport index "Overview" {
+    formats html
+    center '<[report id="overview"]>'
+  }
+
+  textreport "Status" {
+    formats html
+    center -8<-
+      <[report id="status.dashboard"]>
+      ----
+      <[report id="status.completed"]>
+      ----
+      <[report id="status.ongoing"]>
+      ----
+      <[report id="status.future"]>
+    ->8-
+  }
+
+  textreport wps "Work packages" {
+    textreport wp1 "Work package 1" {
+      formats html
+      center '<[report id="wp1"]>'
+    }
+
+    textreport wp2 "Work package 2" {
+      formats html
+      center '<[report id="wp2"]>'
+    }
+  }
+
+  textreport "Deliveries" {
+    formats html
+    center '<[report id="deliveries"]>'
+  }
+
+  textreport "ContactList" {
+    formats html
+    title "Contact List"
+    center '<[report id="contactList"]>'
+  }
+  textreport "ResourceGraph" {
+    formats html
+    title "Resource Graph"
+    center '<[report id="resourceGraph"]>'
+  }
+}
+
+# A traditional Gantt chart with a project overview.
+taskreport overview "" {
+  header -8<-
+    === Project Overview ===
+
+    The project is structured into 2 work packages.
+
+    # Specification
+    # <-reportlink id='frame.wps.wp1'->
+    # <-reportlink id='frame.wps.wp2'->
+    # Testing
+
+    === Original Project Plan ===
+  ->8-
+  columns bsi { title 'WBS' },
+          name, start, end, effort, cost,
+          revenue, chart { ${TaskTip} }
+  # For this report we like to have the abbreviated weekday in front
+  # of the date. %a is the tag for this.
+  timeformat "%a %Y-%m-%d"
+  loadunit days
+  hideresource 1
+  balance cost rev
+  caption 'All effort values are in man days.'
+
+  footer -8<-
+    === Staffing ===
+
+    All project phases are properly staffed. See [[ResourceGraph]] for
+    detailed resource allocations.
+
+    === Current Status ===
+
+    Some blurb about the current situation.
+  ->8-
+}
+
+# Macro to set the background color of a cell according to the alert
+# level of the task.
+macro AlertColor [
+  cellcolor plan.alert = 0 "#00D000" # green
+  cellcolor plan.alert = 1 "#D0D000" # yellow
+  cellcolor plan.alert = 2 "#D00000" # red
+]
+
+taskreport status "" {
+  columns bsi { width 50 title 'WBS' }, name { width 150 },
+          start { width 100 }, end { width 100 },
+          effort { width 100 },
+          alert { tooltip plan.journal
+                          != '' "<-query attribute='journal'->" width 150 },
+          status { width 150 }
+
+  taskreport dashboard "" {
+    headline "Project Dashboard (<-query attribute='now'->)"
+    columns name { title "Task" ${AlertColor} width 200},
+            resources { width 200 ${AlertColor}
+                        listtype bullets
+                        listitem "<-query attribute='name'->"
+                        start ${projectstart} end ${projectend} },
+            alerttrend { title "Trend" ${AlertColor} width 50 },
+            journal { width 350 ${AlertColor} }
+    journalmode status_up
+    journalattributes headline, author, date, summary, details
+    hidetask ~hasalert(0)
+    sorttasks alert.down, plan.end.up
+    period %{${now} - 1w} +1w
+  }
+  taskreport completed "" {
+    headline "Already completed tasks"
+    hidetask ~(plan.end <= ${now})
+  }
+  taskreport ongoing "" {
+    headline "Ongoing tasks"
+    hidetask ~((plan.start <= ${now}) & (plan.end > ${now}))
+  }
+  taskreport future "" {
+    headline "Future tasks"
+    hidetask ~(plan.start > ${now})
+  }
+}
+
+# A list of tasks showing the resources assigned to each task.
+taskreport wp1 "" {
+  headline "Work package 1 - Resource Allocation Report"
+  columns bsi { title 'WBS' }, name, start, end, effort { title "Work" },
+          duration, chart { ${TaskTip} scale day width 500 }
+  timeformat "%Y-%m-%d"
+  hideresource ~(isleaf() & isleaf_())
+  sortresources name.up
+  taskroot project.wp1
+}
+# A list of tasks showing the resources assigned to each task.
+taskreport wp2 "" {
+  headline "Work package 2 - Resource Allocation Report"
+  columns bsi { title 'WBS' }, name, start, end, effort { title "Work" },
+          duration, chart { ${TaskTip} scale day width 500 }
+  timeformat "%Y-%m-%d"
+  hideresource ~(isleaf() & isleaf_())
+  sortresources name.up
+  taskroot project.wp2
+}
+
+# A list of all tasks with the percentage completed for each task
+taskreport deliveries "" {
+  headline "Project Deliverables"
+  columns bsi { title 'WBS' }, name, start, end, note { width 150 }, complete,
+          chart { ${TaskTip} }
+  taskroot project.deliveries
+  hideresource 1
+}
+# A list of all employees with their contact details.
+resourcereport contactList "" {
+  headline "Contact list and duty plan"
+  columns name,
+          email { celltext 1 "[mailto:<-email-> <-email->]" },
+          managers { title "Manager" },
+          chart { scale day }
+  hideresource ~isleaf()
+  sortresources name.up
+  hidetask 1
+}
+
+# A graph showing resource allocation. It identifies whether each
+# resource is under- or over-allocated for.
+resourcereport resourceGraph "" {
   headline "Resource Allocation Graph"
   columns no, name, effort, rate, weekly { ${TaskTip} }
   loadunit shortauto
