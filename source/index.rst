@@ -9,10 +9,10 @@
 
    
    work/index
-   miscellaneous/index
-
 
 .. toctree::
    :hidden:
 
    diary/index
+   miscellaneous/index
+
