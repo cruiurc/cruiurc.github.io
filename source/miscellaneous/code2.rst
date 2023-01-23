@@ -1,6 +1,9 @@
 Visual plan
 ============
 
+step
+-----
+
 .. graphviz::
 
     digraph mind{
@@ -26,7 +29,9 @@ Visual plan
         筛选status -> 绘制表格;
     }
 
-----
+
+sample
+-------
 
 .. code:: python
 
