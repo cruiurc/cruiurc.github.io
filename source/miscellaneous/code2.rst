@@ -3,7 +3,7 @@ Visual plan
 
 .. graphviz::
 
-    digraph abc{
+    digraph mind{
         读取excel;
         保存project-name;
         读取excel;
@@ -26,7 +26,7 @@ Visual plan
         筛选status -> 绘制表格;
     }
 
-
+----
 
 .. code:: python
 
