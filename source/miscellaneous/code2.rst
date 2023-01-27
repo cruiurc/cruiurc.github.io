@@ -6,11 +6,26 @@ step
 
 .. graphviz::
 
+    digraph abc{
+        a哦;
+        额;
+        c;
+        度;
+
+        a哦 -> 额;
+        额 -> 度;
+        c -> 度;
+    }
+
+
+
+.. graphviz::
+
     digraph mind{
         读取excel;
-        保存project-name;
+        保存projectname;
         读取excel;
-        新增project-name;
+        新增projectname;
         写入csv;
         清理csv中的重复值;
         读取csv;
@@ -18,10 +33,10 @@ step
         绘制表格;
         筛选status;
 
-        读取excel -> 保存project-name;
-        保存project-name -> 读取excel;
-        读取excel -> 新增project-name;
-        新增project-name -> 写入csv;
+        读取excel -> 保存projectname;
+        保存projectname -> 读取excel;
+        读取excel -> 新增projectname;
+        新增projectname -> 写入csv;
         写入csv -> 清理csv中的重复值;
         清理csv中的重复值 -> 读取csv;
         读取csv -> 绘制甘特图;
