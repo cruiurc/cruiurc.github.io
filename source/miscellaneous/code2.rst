@@ -35,8 +35,148 @@ step
 
 df_count2['budget_sum']=df_count2['budget'].cumsum(axis=0)
 
-code
------
+code(new)
+----------
+
+import pandas as pd
+import plotly.figure_factory as ff
+import plotly.graph_objects as go
+import plotly.express as px
+from dash import Dash, html, dcc
+
+app = Dash(__name__)
+
+#读取excel，保存projectname;
+path = '/mnt/c/Users/crui/Desktop/learn/demo-proj.xlsx'
+source = '/mnt/c/Users/crui/Desktop/learn/data.csv'
+projectName = pd.read_excel(path, header=None).loc[0][3]
+
+
+#读取excel中的数据域;
+df_project = pd.read_excel(path, skiprows = [0, 1, 2], parse_dates = [10, 11], date_parser = lambda x: pd.to_datetime(x, format = '%Y/%m/%d'))
+
+#新增projectname;
+df_project['project'] = projectName
+
+#读取csv
+#df = pd.read_csv(source)
+#合并df并清理重复数据
+#df = pd.concat([df, df_project], axis=0)
+#drop_index = df.loc[df.duplicated(subset=['project', 'Task', 'wbs'], keep='last')].index
+#df.drop(labels=drop_index)
+df = df_project
+#将清理后结果写入csv
+df.to_csv(source, index = False, sep = ',', encoding = 'utf_8_sig')
+
+#绘制甘特图;
+#fig_gantt = ff.create_gantt(df, bar_width=0.4, height=850, showgrid_y=True, show_colorbar=True, colors='Resource')
+
+fig_gantt = px.timeline(df, x_start="Start", x_end='Finish', y='Task', color='Complete')
+
+fig_gantt.update_yaxes(autorange="reversed")
+#整理风险数据
+df_risk = df[df['status'].isin(['Yellow', 'Red'])]
+df_risk.to_csv('/mnt/c/Users/crui/Desktop/learn/'+projectName+'-risk.csv')
+
+#绘制风险表格;
+fig_risk = go.Figure(data=[go.Table(
+    columnorder = [1, 2, 3, 4, 5],
+    columnwidth = [20, 50, 50, 100, 100],
+    header=dict(
+        values=['WBS', 'Task', 'Status', 'note', 'Risk'],
+        line_color='darkslategray',
+        fill_color='royalblue',
+        align=['left','center'],
+        font=dict(color='white', size=12),
+        height=40
+    ),
+
+    cells=dict(
+        values=[df_risk.wbs, df_risk.Task, df_risk.status,df_risk.note, df_risk.risk],
+        fill=dict(color=['paleturquoise', 'white']),
+        align=['left', 'center'],
+        font_size=12,
+        height=30
+    )
+)])
+
+#创建成本绩效分析表
+df_cost = df.set_index('Finish').resample('w').sum()
+df_cost['budget_sum']=df_cost['budget'].cumsum(axis=0)
+df_cost['cost_sum']=df_cost['cost'].cumsum(axis=0)
+df_cost.to_csv('/mnt/c/Users/crui/Desktop/learn/'+projectName+'-cost.csv', encoding = 'utf_8_sig')
+#绘制成本绩效曲线
+fig_cost = go.Figure()
+fig_cost.add_trace(go.Scatter(x=df_cost.index, y=df_cost['budget_sum'], mode='lines+markers+text', name='Budget'))
+fig_cost.add_trace(go.Scatter(x=df_cost.index, y=df_cost['cost_sum'], mode='lines+markers+text', name='Cost'))
+#创建进度绩效分析表
+df_schedule = df.dropna(how='all', subset=['wh', 'Complete'])
+df_schedule['wh_actual'] = df_schedule['wh']*df_schedule['Complete']
+df_schedule['wh_sum'] = df_schedule['wh'].cumsum(axis=0)
+df_schedule['wh_actual_sum'] = df_schedule['wh_actual'].cumsum(axis=0)
+df_schedule.to_csv('/mnt/c/Users/crui/Desktop/learn/'+projectName+'-schedule.csv', encoding='utf_8_sig')
+
+fig_schedule = go.Figure()
+fig_schedule.add_trace(go.Scatter(x=df_schedule.index, y=df_schedule['wh_sum'], mode='lines+markers+text', name='Planed Value'))
+fig_schedule.add_trace(go.Scatter(x=df_schedule.index, y=df_schedule['wh_actual_sum'], mode='lines+markers+text', name='Earned Value'))
+
+#创建成本分析表
+#df_report = df.set_index('Finish').resample('w').sum()
+#df_report['budget_sum'] = df_report['budget'].cumsum(axis=0)
+#df_report['cost_sum'] = df_report['cost'].cumsum(axis=0)
+#df_report['wh_sum'] = df_report['wh'].cumsum(axis=0)
+#df_report['wh_actual'] = df_report['wh']*df_report['Complete'].cumsum(axis=0)
+#df_report.to_csv('/mnt/c/Users/crui/Desktop/learn/'+projectName+'-report.csv')
+
+
+#创建成本分析表
+#df_report = df.set_index('Finish').resample('w').sum().dropna()
+#df_report['budget_sum']=df_cost['budget'].cumsum(axis=0)
+#df_report['cost_sum']=df_cost['cost'].cumsum(axis=0)
+#df_report.to_csv('/mnt/c/Users/crui/Desktop/learn/'+projectName+'-report.csv')
+
+#绘制成本曲线
+#fig_cost = go.Figure()
+#fig_cost.add_trace(go.Scatter(x=df_report.index, y=df_report['budget_sum'], mode='lines+markers+text', name='budget'))
+#fig_cost.add_trace(go.Scatter(x=df_report.index, y=df_report['cost_sum'], mode='lines+markers+text', name='cost'))
+
+
+app.layout = html.Div(children=[
+    html.H1(children='Hello Dash'),
+
+    html.Div(children='''
+        Dash: A web application framework for your data.
+    '''),
+
+    dcc.Graph(
+        id='example-table',
+        figure=fig_gantt
+    ),
+
+    dcc.Graph(
+        id='example-table1',
+        figure=fig_risk
+    ),
+
+    dcc.Graph(
+        id='example-table2',
+        figure=fig_cost
+    ),
+    dcc.Graph(
+        id='example-table3',
+        figure=fig_schedule
+    )
+])
+
+if __name__ == '__main__':
+    app.run_server(debug=True)
+
+
+
+code(old)
+-----------
+
+
 ::
     import pandas as pd
     import plotly.figure_factory as ff
@@ -88,15 +228,26 @@ code
             height=30
         )
     )])
-    #创建成本分析表
+    #创建成本绩效分析表
     df_cost = df.set_index('Finish').resample('w').sum()
     df_cost['budget_sum']=df_cost['budget'].cumsum(axis=0)
     df_cost['cost_sum']=df_cost['cost'].cumsum(axis=0)
-    df_cost.to_csv('/mnt/c/Users/crui/Desktop/learn/'+projectName+'-report.csv')
-    #绘制成本曲线
+    #绘制成本绩效曲线
     fig_cost = go.Figure()
     fig_cost.add_trace(go.Scatter(x=df_cost.index, y=df_cost['budget_sum'], mode='lines+markers+text'))
     fig_cost.add_trace(go.Scatter(x=df_cost.index, y=df_cost['cost_sum'], mode='lines+markers+text'))
+    #创建进度绩效分析表
+    df_schedule = df
+    df_schedule['wh_actual']=df_schedule['wh']*df_schedule['Complete']
+    df_schedule['wh_sum']=df_schedule['wh'].cumsum(axis=0)
+    df_schedule['wh_actual_sum']=df_schedule['wh_actual'].cumsum(axis=0)
+    df_schedule.to_csv('/mnt/c/Users/crui/Desktop/learn/'+projectName+'-schedule.csv')
+
+    fig_schedule = go.Figure()
+    fig_schedule.add_trace(go.Scatter(x=df_schedule.index, y=df_schedule['wh_sum'], mode='lines+markers+text'))
+    fig_schedule.add_trace(go.Scatter(x=df_schedule.index, y=df_schedule['wh_actual_sum'], mode='lines+markers+text'))
+
+    #页面布局
     app.layout = html.Div(children=[
         html.H1(children='Hello Dash'),
         html.Div(children='''
