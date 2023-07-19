@@ -11,6 +11,7 @@
    work/index
 
 .. toctree::
+   :maxdepth: 1
 
 
    diary/index
