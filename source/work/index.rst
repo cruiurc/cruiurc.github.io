@@ -1,6 +1,17 @@
 工作
 ====
 
+1. LP
+
+
+.. toctree::
+   :maxdepth: 1
+
+   lp/lp
+
+
+----   
+
 1. SJ
 
 
@@ -34,3 +45,4 @@
    :glob:	      
 
    yjh/topic/*
+
