@@ -5,14 +5,13 @@
 
 .. toctree::
    :maxdepth: 1
-      
 
-   
+
+
    work/index
 
 .. toctree::
-   :hidden:
+
 
    diary/index
    miscellaneous/index
-
