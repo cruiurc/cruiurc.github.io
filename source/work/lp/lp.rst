@@ -24,7 +24,8 @@
 
    2. 锂电池结构：
 
-      .. image:: asset/20230720-li.jpg
+      .. image:: asset/20230720-li.png
+      
       .. image:: asset/20230720-li2.png
 
 2023-7-19
