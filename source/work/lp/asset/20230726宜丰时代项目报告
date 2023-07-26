@@ -9,12 +9,11 @@
    :widths: 25 25 50
    :header-rows: 1
 
-   * - Heading row 1, column 1
-     - Heading row 1, column 2
-     - Heading row 1, column 3
-   * - Row 1, column 1
-     -
-     - Row 1, column 3
-   * - Row 2, column 1
-     - Row 2, column 2
-     - Row 2, column 3
+   * - 钢构
+     - 外墙
+     - 地坪
+   * - 100%
+     - 0
+     - 40%
+
+:风险: 厂房内部地坪施工与设备安装调试间存在大量交叉施工
