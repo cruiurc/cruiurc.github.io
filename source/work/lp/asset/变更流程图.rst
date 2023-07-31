@@ -1,0 +1,18 @@
+流程图
+========
+
+立项
+----
+.. graphviz::
+
+    digraph 变更{
+      {
+        node [margin=0 fontcolor=blue shape=box style=filled];
+        判断变更类型 [shap=diamond];
+      }
+        变更申请 -> 判断变更类型 [shap=diamond];
+        判断变更类型 [shap=diamon] -> 批准进度变更 [label="进度变更"];
+        判断变更类型 [shap=diamon] -> 批准预算变更 [label="预算变更"];
+        批准进度变更 -> 实施进度变更;
+        批准预算变更 -> 实施预算变更;
+    }
