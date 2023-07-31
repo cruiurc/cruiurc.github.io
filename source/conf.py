@@ -31,7 +31,7 @@ author = 'cr'
 # extensions = [
 # ]
 # 通过配置开启graphviz插件
-extensions = ['sphinx.ext.graphviz', 'sphinxcontrib.mermaid']
+extensions = ['sphinx.ext.graphviz']
 
 # 设置 graphviz_dot 路径
 graphviz_dot = 'dot'
