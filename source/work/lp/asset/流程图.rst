@@ -13,14 +13,15 @@
         立项评审会 -> 立项批准;
     }
 
+-----
 
 变更
 ----
 .. graphviz::
 
     digraph 变更{
-        提交变更申请 -> 分析变更类型 [shap=box];
-        分析变更类型 [shap=box] -> 范围变更;
-        分析变更类型 [shap=box] -> 进度变更;
-        分析变更类型 [shap=box] -> 预算变更;
+        提交变更申请 -> 分析变更类型 [shap=diamond];
+        分析变更类型 [shap=diamond] -> 范围变更;
+        分析变更类型 [shap=diamond] -> 进度变更;
+        分析变更类型 [shap=diamond] -> 预算变更;
     }
