@@ -1,3 +1,6 @@
+graphviz test
+===============
+
 .. graphviz::
 
     digraph abc{
