@@ -127,10 +127,10 @@
 
 信息系统中的立项流程：
 
+
 .. graphviz::
 
     digraph 信息系统中的立项流程{
-      rankdir=LR
       {
         创建 [shape=box fontsize=8 label="1 创建 | 立项小组组长"];
         会签 [shape=box fontsize=8 label="2 会签 | 项目成功必要的关键领域分管领导"];
