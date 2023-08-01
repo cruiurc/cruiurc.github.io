@@ -30,13 +30,13 @@
 
     digraph 立项{
       {
-        编制立项建议书 [shape=box fontsize=8 label="2 编制立项建议书"];
-        成立立项小组 [shape=box fontsize=8 label="3 成立立项小组"];
-        编制立项申请报告 [shape=box fontsize=8 label="4 编制立项申请报告"];
-        召开立项评审会 [shape=box fontsize=8 label="5 召开立项评审会"];
-        批准立项 [shape=box fontsize=8 label="6 批准立项"];
+        发起立项建议 [shape=box fontsize=8 label="1 发起立项建议"];
+        成立立项小组 [shape=box fontsize=8 label="2 成立立项小组"];
+        编制立项申请报告 [shape=box fontsize=8 label="3 编制立项申请报告"];
+        召开立项评审会 [shape=box fontsize=8 label="4 召开立项评审会"];
+        批准立项 [shape=box fontsize=8 label="5 批准立项"];
       }
-        编制立项建议书 -> 成立立项小组;
+        发起立项建议 -> 成立立项小组;
         成立立项小组 -> 编制立项申请报告;
         编制立项申请报告 -> 召开立项评审会;
         召开立项评审会 -> 批准立项;
@@ -47,9 +47,9 @@
 5.2. 步骤说明
 -------------
 
-**5.2.1. 编制立项建议书**
+**5.2.1. 发起立项建议**
 
-.. list-table:: 编制立项建议书
+.. list-table::
    :widths: 25 25
    :header-rows: 1
 
@@ -59,15 +59,18 @@
      - 立项建议书
 
 
-当项目发起人识别项目机会，
+项目发起人识别到项目机会后，发起立项建议，说明项目项目内容和价值、要解决的问题。立项建议书的编制要求参考： :doc:`asset/立项建议书模板.rst`。
 
 **5.2.2. 成立立项小组**
 
-负责人
-   战略预算发展委员会
+.. list-table::
+   :widths: 25 25
+   :header-rows: 1
 
-交付物
-   立项小组成立通知/会议纪要
+   * - 负责人
+     - 输出
+   * - 战略预算发展委员会
+     - 立项成立通知/会议纪要
 
 **5.2.3. 编制立项申请报告**
 
