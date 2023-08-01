@@ -27,21 +27,22 @@
 5.1. 流程图
 
 .. graphviz::
-digraph 立项{
-  {
-    发现机会点 [shape=box fontsize=8];
-    编制立项建议书 [shape=box fontsize=8];
-    成立立项小组 [shape=box fontsize=8];
-    编制项目任务书 [shape=box fontsize=8];
-    立项评审会 [shape=box fontsize=8];
-    立项批准 [shape=box fontsize=8];
-  }
-    发现机会点 -> 编制立项建议书;
-    编制立项建议书 -> 成立立项小组;
-    成立立项小组 -> 编制项目任务书;
-    编制项目任务书 -> 立项评审会;
-    立项评审会 -> 立项批准;
-}
+
+    digraph 立项{
+      {
+        发现机会点 [shape=box fontsize=8];
+        编制立项建议书 [shape=box fontsize=8];
+        成立立项小组 [shape=box fontsize=8];
+        编制项目任务书 [shape=box fontsize=8];
+        立项评审会 [shape=box fontsize=8];
+        立项批准 [shape=box fontsize=8];
+      }
+        发现机会点 -> 编制立项建议书;
+        编制立项建议书 -> 成立立项小组;
+        成立立项小组 -> 编制项目任务书;
+        编制项目任务书 -> 立项评审会;
+        立项评审会 -> 立项批准;
+    }
 
 5.2. 步骤说明
 
