@@ -55,7 +55,7 @@
 
     digraph 立项{
       {
-        发现机会点 [shape=box fontsize=8];
+        "1 发现机会点" [shape=box fontsize=8];
         编制立项建议书 [shape=box fontsize=8];
         成立立项小组 [shape=box fontsize=8];
         编制项目任务书 [shape=box fontsize=8];
