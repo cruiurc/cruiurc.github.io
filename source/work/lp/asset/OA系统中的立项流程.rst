@@ -10,7 +10,7 @@ OA系统中的立项流程
         会签 [shape=box fontsize=8];
         投资委员会决策 [shape=box fontsize=8];
         批准 [shape=box fontsize=8];
-        通知/归档 [shape=box fontsize=8];
+        通知&归档 [shape=box fontsize=8];
       }
         创建 -> 会签;
         会签 -> 投资委员会决策;
@@ -18,6 +18,20 @@ OA系统中的立项流程
         批准 -> 通知/归档;
     }
 
+
+    digraph 立项{
+      {
+        创建 [shape=box fontsize=8 label="1 创建"];
+        会签 [shape=box fontsize=8 label="2 会签"];
+        投资委员会决策 [shape=box fontsize=8 label="3 投资委员会决策"];
+        批准 [shape=box fontsize=8 label="4 批准"];
+        通知&归档 [shape=box fontsize=8 label="5 通知&归档"];
+      }
+        创建 -> 会签;
+        会签 -> 投资委员会决策;
+        投资委员会决策 -> 批准;
+        批准 -> 通知&归档;
+    }
 
 
 
