@@ -43,11 +43,11 @@
 
     digraph 立项{
       {
-        发起立项建议 [shape=box fontsize=8 label="1 发起立项建议"];
-        成立立项小组 [shape=box fontsize=8 label="2 成立立项小组"];
-        编制立项申请报告 [shape=box fontsize=8 label="3 编制立项申请报告"];
-        召开立项评审会 [shape=box fontsize=8 label="4 召开立项评审会"];
-        完成立项 [shape=box fontsize=8 label="5 完成立项"];
+        发起立项建议 [shape=box fontsize=8 width=1 label="1 发起立项建议"];
+        成立立项小组 [shape=box fontsize=8 width=1 label="2 成立立项小组"];
+        编制立项申请报告 [shape=box fontsize=8 width=1 label="3 编制立项申请报告"];
+        召开立项评审会 [shape=box fontsize=8 width=1 label="4 召开立项评审会"];
+        完成立项 [shape=box fontsize=8 width=1 label="5 完成立项"];
       }
         rankdir="LR"
         发起立项建议 -> 成立立项小组 -> 编制立项申请报告 -> 召开立项评审会 -> 完成立项;

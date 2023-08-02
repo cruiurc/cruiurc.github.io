@@ -6,16 +6,15 @@ OA系统中的立项流程
 
     digraph 信息系统中的立项流程{
       {
-        创建 [shape=box fontsize=8 label="1 创建"];
-        会签 [shape=box fontsize=8 label="2 会签"];
-        投资委员会决策 [shape=box fontsize=8 label="3 投资委员会决策"];
-        批准 [shape=box fontsize=8 label="4 批准"];
-        通知归档 [shape=box fontsize=8 label="5 通知&归档"];
+        创建 [shape=box fontsize=8 width=1 label="1 创建"];
+        会签 [shape=box fontsize=8 width=1 label="2 会签"];
+        投资委员会决策 [shape=box fontsize=8 width=1 label="3 投资委员会决策"];
+        批准 [shape=box fontsize=8 width=1 label="4 批准"];
+        通知归档 [shape=box fontsize=8 width=1 label="5 通知&归档"];
       }
         rankdir="LR"
         创建 -> 会签 -> 投资委员会决策 -> 批准 -> 通知归档;
     }
-
 
 
 
