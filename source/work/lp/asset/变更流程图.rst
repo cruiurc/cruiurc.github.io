@@ -7,17 +7,17 @@
         rankdir=LR
         {
           提交变更申请到PMO [shape=box fontsize=8];
-          判断变更类型 [shape=diamond fontsize=8];
-          提交进度变更申请到战略委员会 [shape=diamond fontsize=8];
-          提交预算变更到投资委员会 [shape=diamond fontsize=8];
+          审核变更 [shape=diamond fontsize=8];
+          提交进度变更申请到战略委员会 [shape=box fontsize=8];
+          提交预算变更到投资委员会 [shape=box fontsize=8];
           批准进度变更 [shape=box fontsize=8];
           批准预算变更 [shape=box fontsize=8];
           实施进度变更 [shape=box fontsize=8];
           实施预算变更 [shape=box fontsize=8];
         }
-          变更申请 -> 判断变更类型;
-          判断变更类型 -> 提交进度变更申请到战略委员会 -> 批准进度变更 [label="进度变更" fontsize=8];
-          批准进度变更 ->批准进度变更 -> 实施进度变更;
-          判断变更类型 -> 提交预算变更到投资委员会 -> 批准预算变更 [label="预算变更" fontsize=8];
-          批准预算变更 -> 批准预算变更 -> 实施预算变更;
+          提交变更申请到PMO -> 判断变更类型;
+          审核变更 -> 提交进度变更申请到战略委员会 -> 批准进度变更 [label="进度变更" fontsize=8];
+          批准进度变更 -> 实施进度变更;
+          审核变更 -> 提交预算变更到投资委员会 -> 批准预算变更 [label="预算变更" fontsize=8];
+          批准预算变更 -> 实施预算变更;
         }
