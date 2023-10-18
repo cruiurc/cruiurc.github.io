@@ -65,4 +65,3 @@ html_theme = 'bizstyle'
 html_static_path = ['_static']
 
 language = 'zh_CN'
-
