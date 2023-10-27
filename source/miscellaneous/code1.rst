@@ -7,14 +7,14 @@
    import pandas as pd
    import datetime as dt
    import os
-   
-   
+
+
    date = dt.date.today()
    st.markdown(date)
-   
+
    st.title('产品中心周报')
-   
-   
+
+
    for file in os.listdir():
        if file.endswith('.xlsx'):
            name = os.path.splitext(file)[0]
@@ -73,25 +73,25 @@
                st.write('- ' + head + '  ' + '|' + '  ' + body)
            st.header('进度计划')
            st.image(name+'.png')
-   
+
 
 另一个less版本
 
 .. code:: python
-   
+
    import streamlit as st
    import pandas as pd
    import datetime as dt
    import os
-   
-   
+
+
    date = dt.date.today()
    st.markdown(date)
-   
+
    st.title('产品中心周报')
-   
-   
-   
+
+
+
    for file in os.listdir():
        if file.endswith('.xlsx'):
            name = os.path.splitext(file)[0]
@@ -130,4 +130,3 @@
                st.write(line2)
                st.write(line3)
                st.write(line4)
-   
