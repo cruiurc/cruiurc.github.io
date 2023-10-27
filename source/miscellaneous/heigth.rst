@@ -1,9 +1,9 @@
 x2's 身高记录
 =============
 
-# .. csv-table:: x2
-#     :header: "Date", "Heigth(cm)"
-#     :widths: 15, 10
+.. csv-table:: x2
+    :header: "Date", "Heigth(cm)"
+    :widths: 15, 10
 
     2022-9-15, pm, 100
     2022-10-5, pm, 100.3
