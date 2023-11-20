@@ -1,3 +1,22 @@
+2023-11-20
+-----------
+1. 电解水制氢项目例会：
+
+    1. 加速海外客户开发力度，从新闻中发掘客户并开发
+    2. 北京测试预计今天流程走完，完成后签合同，完成时间计划，争取在元旦前完成测试；
+    3. 首个销售订单的设计交付过程需要严密策划，加快进度
+    4. ROE按照公司领导要求达成20%收益水平
+    5. 再次强调了推广全员营销的重要性
+
+2. VM-OpenProject:
+
+    id:LP10818
+    pw:LP10818@
+
+3. docker commander:
+
+    docker run -d -p 8080:80   -e OPENPROJECT_SECRET_KEY_BASE=secret   -e OPENPROJECT_HOST__NAME=10.8.6.56:8080   -e OPENPROJECT_HTTPS=false   -e OPENPROJECT_DEFAULT__LANGUAGE=zh-CN   openproject/community:13
+
 2023-11-9
 ----------
 - [x] 宜丰时代ROE汇报
