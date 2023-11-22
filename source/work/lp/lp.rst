@@ -1,3 +1,7 @@
+2023-11-22
+-----------
+
+
 2023-11-20
 -----------
 1. 电解水制氢项目例会：
@@ -10,12 +14,54 @@
 
 2. VM-OpenProject:
 
-    id:LP10818
-    pw:LP10818@
+    host: https://vis.lopal.cn:5443/
+
+    id: LP10818
+
+    pw: LP10818@
+
+    ip: 10.8.6.56
+
+    rootid: root
+
+    rootpw: cr&lct@1015
 
 3. docker commander:
 
     docker run -d -p 8080:80   -e OPENPROJECT_SECRET_KEY_BASE=secret   -e OPENPROJECT_HOST__NAME=10.8.6.56:8080   -e OPENPROJECT_HTTPS=false   -e OPENPROJECT_DEFAULT__LANGUAGE=zh-CN   openproject/community:13
+
+4. 视频教程大纲：
+
+    1. 进入平台（浏览器）
+
+    2. 注册账号
+
+    3. 获取权限和加入项目
+
+    4. 创建项目
+
+    5. 创建工作包
+
+        1. 设定关系——父级和前置
+
+        2. 创建工作包和设定时间
+
+        3. 在工作包的下一级展开分解
+
+        4. 分配受理人
+
+    6. 工作包类型——阶段&任务&里程碑&缺陷
+
+    7. 更新工作包进展
+
+    8. 更新工作包进度和状态
+
+    9. 记录工作包成本
+
+    10. 定制“我的页面”
+
+    11. 设定用户时区
+
 
 2023-11-9
 ----------
