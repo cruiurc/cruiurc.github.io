@@ -33,7 +33,7 @@ debian12下默认安装的是最新的正式版本1.1.0（最新的开发版本�
     Created /var/taskd/config
 
 
-下面进入源文件夹下的pki目录（如果是apt安装就在 :code:`/usr/share/taskd/pki`），修改vars中的CN变量：
+下面进入源文件夹下的pki目录（如果是apt安装就在``/usr/share/taskd/pki``），修改vars中的CN变量：
 
 .. code-block:: bash
 
@@ -49,9 +49,7 @@ debian12下默认安装的是最新的正式版本1.1.0（最新的开发版本�
     CN=xxx.xxx.xxx.xxx
 
 
-CN（公用名）的值很重要。
-
-Taskwarrior 会根据此值验证服务器名称，因此请使用类似于 的值，不要指望该示例适合您。 如果不更改此值，则客户端的唯一选择是跳过部分或全部证书验证，这是一个坏主意。ack.example.com
+CN（公用名）的值很重要。Taskwarrior 会根据此值验证服务器名称，因此请使用类似于 的值，不要指望该示例适合您。 如果不更改此值，则客户端的唯一选择是跳过部分或全部证书验证，这是一个坏主意。ack.example.com
 
 生成和复制证书
 --------------
@@ -91,7 +89,7 @@ Taskwarrior 会根据此值验证服务器名称，因此请使用类似于 的�
     $ taskd config --force pid.file $PWD/taskd.pid
     $ taskd config --force server localhost:53589
 
-注意这里有一个大坑，就是 :code:`localhost`这里，如果配置成vps的公网ip，后面会出现“Cannot assign requested address”的错误，导致客户端连接不上。必须是localhost或者内网IP。
+注意这里有一个大坑，就是``localhost``这里，如果配置成vps的公网ip，后面会出现“Cannot assign requested address”的错误，导致客户端连接不上。必须是localhost或者内网IP。
 
 所有的配置可以在下面的命令中检查：
 
@@ -111,7 +109,7 @@ Taskwarrior 会根据此值验证服务器名称，因此请使用类似于 的�
 --------
 
 
-需要在 ::code:`/etc/systemd/system`下编写一个 ::code:`taskd.service`文件，以实现自启动：
+需要在``/etc/systemd/system``下编写一个``taskd.service``文件，以实现自启动：
 
 .. code-block:: bash
 
@@ -141,7 +139,7 @@ Taskwarrior 会根据此值验证服务器名称，因此请使用类似于 的�
     [Install]
     WantedBy=multi-user.target
 
-需要注意上面的 :code:`User`和 :code:`Group`要填写系统用户名。之后通过命令启动程序和检查：
+需要注意上面的``User``和``Group``要填写系统用户名。之后通过命令启动程序和检查：
 
 .. code-block:: bash
 
@@ -183,7 +181,7 @@ This will generate a new key and cert, named and . It is not important that 'fir
 
 客户端配置
 ----------
-在客户端通过apt安装taskwarrior，将刚才创建的证书复制到 :code:`~/.task`文件夹，并配置客户端：
+在客户端通过apt安装taskwarrior，将刚才创建的证书复制到``~/.task``文件夹，并配置客户端：
 
 .. code-block:: bash
 
@@ -199,7 +197,7 @@ This will generate a new key and cert, named and . It is not important that 'fir
     $ task config taskd.credentials -- Public/First Last/cf31f287-ee9e-43a8-843e-e8bbd5de4294
 
 
-这里使用的 :code:`host.domain`是vps的公网地址。
+这里使用的``host.domain``是vps的公网地址。
 
 同步
 -----
