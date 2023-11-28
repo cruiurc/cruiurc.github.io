@@ -42,7 +42,7 @@ debian12下默认安装的是最新的正式版本1.1.0（最新的开发版本�
 
 设置变量
 --------
-修改CN变量为服务器地址，这里填写vps的IP地址：
+修改 ``CN``变量为服务器地址，这里填写vps的IP地址：
 
 .. code-block:: bash
 
@@ -181,7 +181,7 @@ This will generate a new key and cert, named and . It is not important that 'fir
 
 客户端配置
 ----------
-在客户端通过apt安装taskwarrior，将刚才创建的证书复制到 ``~/.task``文件夹，并配置客户端：
+在客户端通过apt安装taskwarrior，将刚才创建的证书复制到 ``~/.task`` 文件夹，并配置客户端：
 
 .. code-block:: bash
 
@@ -197,7 +197,7 @@ This will generate a new key and cert, named and . It is not important that 'fir
     $ task config taskd.credentials -- Public/First Last/cf31f287-ee9e-43a8-843e-e8bbd5de4294
 
 
-这里使用的 ``host.domain``是vps的公网地址。
+这里使用的 ``host.domain`` 是vps的公网地址。
 
 同步
 -----
