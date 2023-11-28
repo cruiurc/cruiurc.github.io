@@ -205,6 +205,6 @@ This will generate a new key and cert, named and . It is not important that 'fir
 
     $ task sync init
     Please confirm that you wish to upload all your pending tasks to the Task Server (yes/no) yes
-Syncing with host.domain:53589
+    Syncing with host.domain:53589
 
     Sync successful.  2 changes uploaded.
