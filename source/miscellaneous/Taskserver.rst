@@ -19,26 +19,26 @@ debian12下默认安装的是最新的正式版本1.1.0（最新的开发版本�
 
 .. code-block:: bash
 
-$ export TASKDDATA=/var/taskd
-$ sudo mkdir -p $TASKDDATA
+    $ export TASKDDATA=/var/taskd
+    $ sudo mkdir -p $TASKDDATA
 
 进入整个文件夹并初始化：
 
 .. code-block:: bash
 
-$ taskd init
-You must specify the 'server' variable, for example:
-taskd config server localhost:53589
+    $ taskd init
+    You must specify the 'server' variable, for example:
+    taskd config server localhost:53589
 
-Created /var/taskd/config
+    Created /var/taskd/config
 
 
 下面进入源文件夹下的pki目录（如果是apt安装就在/usr/share/taskd/pki），修改vars中的CN变量：
 
 .. code-block:: bash
 
-$ cd /usr/share/taskd/pki
-$ emacs vars
+    $ cd /usr/share/taskd/pki
+    $ emacs vars
 
 设置变量
 --------
@@ -46,7 +46,7 @@ $ emacs vars
 
 .. code-block:: bash
 
-CN=xxx.xxx.xxx.xxx
+    CN=xxx.xxx.xxx.xxx
 
 
 CN（公用名）的值很重要。
@@ -59,15 +59,15 @@ Taskwarrior 会根据此值验证服务器名称，因此请使用类似于 的�
 
 .. code-block:: bash
 
-$ ./generate
-...
+    $ ./generate
+    ...
 
-$ cp client.cert.pem $TASKDDATA
-$ cp client.key.pem $TASKDDATA
-$ cp server.cert.pem $TASKDDATA
-$ cp server.key.pem $TASKDDATA
-$ cp server.crl.pem $TASKDDATA
-$ cp ca.cert.pem $TASKDDATA
+    $ cp client.cert.pem $TASKDDATA
+    $ cp client.key.pem $TASKDDATA
+    $ cp server.cert.pem $TASKDDATA
+    $ cp server.key.pem $TASKDDATA
+    $ cp server.crl.pem $TASKDDATA
+    $ cp ca.cert.pem $TASKDDATA
 
 配置服务器
 ----------
@@ -75,21 +75,21 @@ $ cp ca.cert.pem $TASKDDATA
 
 .. code-block:: bash
 
-$ taskd config --force client.cert $TASKDDATA/client.cert.pem
-$ taskd config --force client.key $TASKDDATA/client.key.pem
-$ taskd config --force server.cert $TASKDDATA/server.cert.pem
-$ taskd config --force server.key $TASKDDATA/server.key.pem
-$ taskd config --force server.crl $TASKDDATA/server.crl.pem
-$ taskd config --force ca.cert $TASKDDATA/ca.cert.pem
+    $ taskd config --force client.cert $TASKDDATA/client.cert.pem
+    $ taskd config --force client.key $TASKDDATA/client.key.pem
+    $ taskd config --force server.cert $TASKDDATA/server.cert.pem
+    $ taskd config --force server.key $TASKDDATA/server.key.pem
+    $ taskd config --force server.crl $TASKDDATA/server.crl.pem
+    $ taskd config --force ca.cert $TASKDDATA/ca.cert.pem
 
 其他配置：
 
 .. code-block:: bash
 
-$ cd $TASKDDATA/..
-$ taskd config --force log $PWD/taskd.log
-$ taskd config --force pid.file $PWD/taskd.pid
-$ taskd config --force server localhost:53589
+    $ cd $TASKDDATA/..
+    $ taskd config --force log $PWD/taskd.log
+    $ taskd config --force pid.file $PWD/taskd.pid
+    $ taskd config --force server localhost:53589
 
 注意这里有一个大坑，就是“localhost”这里，如果配置成vps的公网ip，后面会出现“Cannot assign requested address”的错误，导致客户端连接不上。必须是localhost或者内网IP。
 
@@ -97,16 +97,14 @@ $ taskd config --force server localhost:53589
 
 .. code-block:: bash
 
-$ taskd config
+    $ taskd config
 
-  <code>
 
 其他配置选项可以在下面的命令中查看：
 
 .. code-block:: bash
 
-$ man taskdrc
-  <code>
+    $ man taskdrc
 
 
 启动设置
