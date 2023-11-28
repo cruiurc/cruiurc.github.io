@@ -9,7 +9,7 @@ Taskwarrior跨平台部署与同步
 
 .. code-block:: bash
 
-$ sudo apt install taskd
+    $ sudo apt install taskd
 
 debian12下默认安装的是最新的正式版本1.1.0（最新的开发版本是1.2.0）。
 
