@@ -84,12 +84,12 @@ CN（公用名）的值很重要。Taskwarrior 会根据此值验证服务器名
 
 .. code-block:: bash
 
-    $ cd $TASKDDATA/..
+    $ cd $TASKDDATA/.
     $ taskd config --force log $PWD/taskd.log
     $ taskd config --force pid.file $PWD/taskd.pid
     $ taskd config --force server localhost:53589
 
-注意这里有一个大坑，就是 ``localhost``这里，如果配置成vps的公网ip，后面会出现"Cannot assign requested address"的错误，导致客户端连接不上。必须是localhost或者内网IP。
+注意这里有一个大坑，就是 ``localhost`` 这里，如果配置成vps的公网ip，后面会出现"Cannot assign requested address"的错误，导致客户端连接不上。必须是localhost或者内网IP。
 
 所有的配置可以在下面的命令中检查：
 
