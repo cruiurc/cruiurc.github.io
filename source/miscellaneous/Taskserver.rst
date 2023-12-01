@@ -22,10 +22,11 @@ debian12下默认安装的是最新的正式版本1.1.0（最新的开发版本�
     $ export TASKDDATA=/var/taskd
     $ sudo mkdir -p $TASKDDATA
 
-进入整个文件夹并初始化：
+进入这个文件夹并初始化：
 
 .. code-block:: bash
 
+    $ cd $TASKDDATA
     $ taskd init
     You must specify the 'server' variable, for example:
     taskd config server localhost:53589
